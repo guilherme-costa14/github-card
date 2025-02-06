@@ -8,3 +8,4 @@ fetch(url)
         console.dir(dados)
     })
 }
+
