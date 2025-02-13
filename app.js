@@ -5,7 +5,7 @@ function fnCarregarDados() {
             return resposta.json()
         })
         .then(dados => {
-            console.dir(dados)
+            fnCarregarDados(dados.avatar_url, dados.name, dados.bio, dados.email, dados.twitter_username, dados.html_url, dados.blog)
         })
 }
 
@@ -21,5 +21,6 @@ function fnMostrarDados(foto, nome, resumo, email, twitter, github, blog) {
 
 let botao = document.getElementById("botao-carregar-dados")
 botao.addEventListener("click", function () {
-    fnMostrarDados("foto.jgp", "Guilherme Costa", "Aluno", "teste@gmail.com", "https://x.com", "https://github.com", "https://dev.to")
+    // fnMostrarDados("foto.jgp", "Guilherme Costa", "Aluno", "teste@gmail.com", "https://x.com", "https://github.com", "https://dev.to") - teste
+    fnCarregarDados()
 })
