@@ -26,3 +26,7 @@ body{
     margin-top: -75px;
     border: 5px solid #fffafa;
 }
+
+#espaco-cartao{
+    display: none;
+}
