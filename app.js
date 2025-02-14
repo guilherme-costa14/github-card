@@ -1,5 +1,5 @@
-function fnCarregarDados() {
-    const url = "https://api.github.com/users/gustavoguanabara"
+function fnCarregarDados(usuario) {
+    const url = "https://api.github.com/users/" + usuario
     // const url = "dados.json"
     fetch(url)
         .then(resposta => {
@@ -35,7 +35,7 @@ function fnMostrarDados(foto, nome, resumo, email, twitter, github, blog) {
 let botao = document.getElementById("botao-carregar-dados")
 botao.addEventListener("click", function () {
     // fnMostrarDados("foto.jgp", "Guilherme Costa", "Aluno", "teste@gmail.com", "https://x.com", "https://github.com", "https://dev.to") - teste
-    fnCarregarDados()
+    fnCarregarDados(document.getElementById("usuario").value)
     document.getElementById("espaco-cartao").style.display = "block"
     document.getElementById("espaco-botao").style.display = "none"
 })
